@@ -21,13 +21,14 @@ int main()
 	scanf("%d",&num);
 	
 	if (num%5==0&&num%7==0)
-  {
+  	{
 		div();
 	}
+	
 	else
-  {
+  	{
 		nodiv();
-  }
+  	}
   
   return 0;
 }
