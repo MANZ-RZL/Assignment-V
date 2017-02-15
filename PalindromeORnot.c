@@ -1,22 +1,30 @@
-// WAP in C to input a number and check whether the number is palindrome or not using function.
-??
-// A program to display the string is palindrome or not.
-#include <stdio.h>
-#include <string.h>
+// A program to check whether the number is palendrome or not.
 
-int main()
-{
-	char str[100],str1[100];
-	printf("Enter a string : ");
-	gets(str);
-	
-	strcpy(str1,str);
-	
-	if(strcmp(strlwr(str),strrev(strlwr(str1)))==0)
-  {
-		printf("It is palendrome");
+#include <stdio.h>
+
+//A function to reverse the number.
+int rev(int a){
+	int reverse;
+	while(a!=0){
+		reverse = reverse * 10;
+		reverse = reverse + a%10;
+		a=a/10;
 	}
-	else 
-		printf("It is not palendrome");
+	return reverse;
+}
+
+int main(){
+	int num;
+	printf ("Enter a number : ");
+	scanf("%d",&num);
+	
+	int n = rev(num);
+	
+	if (n==num){
+		printf("IT is PALINDROME");
+	}
+	else{ 
+		printf("IT is NOT a PALINDROME");
+	}
 	return 0;
 }
