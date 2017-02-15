@@ -19,7 +19,7 @@ void main()
         {
 		passing(arr[i]);
 	}
-        return 0;
+       
 }
 
 void passing(int a)
